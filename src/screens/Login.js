@@ -18,7 +18,7 @@ export default function Login() {
     console.log(json);
 
     if (!json.success) {
-      alert("Enter valid credentials")
+      alert("Enter valid credentials");
     }
 
     if (json.success) {
