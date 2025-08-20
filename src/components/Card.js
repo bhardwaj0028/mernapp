@@ -39,11 +39,11 @@ useEffect(() => {
 return (
     <div>
         <div>
-            <div className="card m-3 " style={{ "width": "18rem", "maxHeight": "360px" }}>
+            <div className="card m-3 bg-secondary " style={{ "width": "18rem", "maxHeight": "360px"}}>
                 <img src={props.foodItem.img} className="card-img-top" alt="..." style={{ height: "180px", objectFit: "fill" }} />
-                <div className="card-body ">
-                    <h5 className="card-title">{props.foodItem.name}</h5>
-                    <div className='container w-100'>
+                <div className="card-body" >
+                    <h5 className="card-title text-black">{props.foodItem.name}</h5>
+                    <div className='container w-100 p-0' >
                         <select className='m-2 h-100 bg-success rounded' onChange={(e) => setQty(e.target.value)}>
                             {Array.from(Array(6), (e, i) => {
                                 return (
@@ -60,14 +60,16 @@ return (
                             }
                         </select>
 
-                        <div className='d-inline h-100 fs-5'>
+                        <div className='d-inline h-100 fs-5 text-black'>
                             {finalPrice}/-
                         </div>
                     </div>
-                    <hr></hr>
+                    <div>
+                    <hr className='text-black'></hr>
                     <button className={'btn btn-success justify-center ms-2'} onClick={handleAddToCart}>
                         Add To Cart
                     </button>
+                    </div>
                 </div>
             </div></div>
 
